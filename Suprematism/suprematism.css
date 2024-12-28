@@ -2879,6 +2879,10 @@ div:not(.owait, .osuccess) > .content.modal-body {
     margin-top: 1rem !important;
 }
 
+.content.modal-body table tbody {
+    display: contents;
+}
+
 .content.modal-body table tr {
     display: flex;
     padding: 0;
@@ -2891,7 +2895,6 @@ div:not(.owait, .osuccess) > .content.modal-body {
 .content.modal-body tr td {
     flex-grow: 3;
     flex-basis: min-content;
-    min-width: 16rem;
 }
 
 .content.modal-body table tr td:first-child {
@@ -2912,7 +2915,8 @@ div:not(.owait, .osuccess) > .content.modal-body {
 }
 
 .owindow .content h1 {
-    font-size: 1.5rem;
+    font-size: calc(1.5rem + 0.5vw);
+    direction: rtl;
 }
 
 .owindow .content p {
@@ -3115,12 +3119,16 @@ div:not(.owait, .osuccess) > .content.modal-body {
     grid-row: 3 / 4;
   }
 
-  div.owindow > div.content >  table {
+  div.owindow > div.content > table {
     display: block;
     max-height: 30vh;
     overflow-y: auto;
   }
 
+  .content.modal-body tr {
+    flex-direction: column;
+}
+    
   div.owindow > div.content >  table tr td:first-child {
     text-align: left;
   }
