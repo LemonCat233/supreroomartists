@@ -106,14 +106,14 @@
 
     --rate-bg: var(--light-ui-bg);
     --rate-txt: var(--light-ui-txt);
-    --rateup-bg: var(--rate-bg);
-    --rateup-txt: var(--accept-color);
-    --ratedown-bg: var(--rate-bg);
-    --ratedown-txt: var(--warning-color);
-    --cancel-bg: var(--rate-bg);
-    --cancel-txt: var(--neutral-color);
-    --info-bg: var(--rate-bg);
-    --info-txt: var(--global-accent-2);
+    --rateup-bg: var(--accept-color);
+    --rateup-txt: var(--bright-ui-txt);
+    --ratedown-bg: var(--warning-color);
+    --ratedown-txt: var(--bright-ui-txt);
+    --cancel-bg: var(--neutral-color);
+    --cancel-txt: var(--bright-ui-txt);
+    --info-bg: var(--bright-ui-bg);
+    --info-txt: var(--bright-ui-txt);
 
     --tabview-bg: var(--light-ui-bg);
     --tabview-txt: var(--light-ui-txt);
@@ -363,7 +363,7 @@ select {
     transition: background var(--global-hover-duration), color var(--global-hover-duration);
 }
 
-.btn:not(span, #login-status *, .owindow .button-bar > a[onclick*=cleanAll]), a.action-area-close {
+.btn:not(.page-rate-widget-box *, #login-status *, .owindow .button-bar > a[onclick*=cleanAll]), a.action-area-close {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -377,7 +377,7 @@ select {
     transition: background var(--global-duration), color var(--global-duration);
 }
 
-.btn:not(span, #login-status *, .owindow .button-bar > a[onclick*=cleanAll]):is(:hover, :focus), a.action-area-close:is(:hover, :focus) {
+.btn:not(.page-rate-widget-box *, #login-status *, .owindow .button-bar > a[onclick*=cleanAll]):is(:hover, :focus), a.action-area-close:is(:hover, :focus) {
     background: rgb(var(--btn-hover-bg));
     color: rgb(var(--btn-hover-txt));
     transition: background var(--global-hover-duration), color var(--global-hover-duration);
@@ -1816,7 +1816,7 @@ table:is(.wiki-content-table, .page-compare) {
 #main-content .page-tags span {
     display: flex;
     align-items: baseline;
-    gap: 0.2rem;
+    gap: 0.5rem;
     flex-wrap: wrap;
     padding: 0.2rem 0;
     border-top: var(--global-border-width) solid rgb(var(--global-border));
@@ -2967,6 +2967,24 @@ div:not(.owait, .osuccess) > .content.modal-body {
 
 .owindow table tr td:first-child {
     text-align: right;
+}
+
+p#flag-user-options-flag {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.flag-user-ok {
+    --btn-txt: var(--accept-color);
+    --global-border: var(--accept-color);
+    --btn-hover-bg: var(--accept-color);
+}
+
+.flag-user-abusive {
+    --btn-txt: var(--warning-color);
+    --global-border: var(--warning-color);
+    --btn-hover-bg: var(--warning-color);
 }
 
 .owindow .button-bar {
