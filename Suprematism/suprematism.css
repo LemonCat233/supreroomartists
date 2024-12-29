@@ -888,6 +888,7 @@ select {
 #side-bar {
     display: block;
     width: var(--sidebar-width);
+    max-width: calc(100% - (var(--header-ui-size) * 2));
     height: 100%;
     position: fixed;
     top: 0;
@@ -952,13 +953,13 @@ select {
 
 #side-bar:is(:hover, :focus-within)::before {
     background: rgba(var(--openmenu-hover-txt));
-    left: var(--sidebar-width);
+    left: min(calc(100% - (var(--header-ui-size) * 2)), var(--sidebar-width));
     transition: left var(--global-hover-duration), background var(--global-hover-duration);
 }
 
 #side-bar:is(:hover, :focus-within)::after {
     background: rgba(var(--openmenu-hover-bg));
-    left: var(--sidebar-width);
+    left: min(calc(100% - (var(--header-ui-size) * 2)), var(--sidebar-width));
     transition: left var(--global-hover-duration), background var(--global-hover-duration);
 }
 
@@ -1371,6 +1372,19 @@ div.page-rate-widget-box .rate-points {
     pointer-events: none;
 }
 
+/* 授权/引用模块 */
+.licensebox a.collapsible-block-link {
+    opacity: 0.75;
+    color: inherit;
+    font-size: 0.8rem;
+    transition: opacity var(--global-duration);
+}
+
+.licensebox a.collapsible-block-link:is(:hover, :active, :focus, :focus-within) {
+    opacity: 1;
+    transition: opacity var(--global-hover-duration);
+}
+
 /* 文字上面标注的小字（这东西就叫 ruby） */
 .rt, .ruby, rt, ruby {
     text-align: center;
@@ -1718,6 +1732,10 @@ table:is(.wiki-content-table, .page-compare) {
     color: rgb(var(--light-ui-txt));
     padding: 0.2rem;
     box-shadow: 0 0.1rem 0 0.05rem rgb(var(--global-border));
+}
+
+.footer-wikiwalk-nav {
+    font-size: 0.8rem;
 }
 
 .shadebox {
