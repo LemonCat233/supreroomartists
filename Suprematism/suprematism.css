@@ -2160,6 +2160,7 @@ ul.nav.nav-pills li a {
 
 #edit-page-comments {
     width: 100%;
+    max-width: 100%;
 }
 
 #lock-info {
@@ -2174,6 +2175,7 @@ ul.nav.nav-pills li a {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .checkbox.do-not-notify label {
@@ -2183,6 +2185,7 @@ ul.nav.nav-pills li a {
 }
 
 div.buttons {
+    flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2223,6 +2226,9 @@ div.buttons input, input.button, button, a.button {
 /* 编辑器：编辑区 */
 /* 编辑区：表单 */
 :is(#edit-page-form, #new-post-form) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     max-width:100%;
     position: relative;
     padding: 1rem;
@@ -2723,6 +2729,7 @@ div.buttons input, input.button, button, a.button {
 /* 编辑区：页面内容 */
 :is(#edit-page-form, #new-post-form) > div:not(.wd-editor-toolbar-panel, .change-textarea-size, .edit-help-34, .checkbox.do-not-notify, #edit-page-captcha, .buttons.alignleft) {
     display: block;
+    width: 100%;
     position: relative;
 }
 
@@ -2732,30 +2739,20 @@ div.buttons input, input.button, button, a.button {
 
 /* 编辑区：编辑区大小 “+-” 按钮 */
 :is(#edit-page-form, #new-post-form) > .change-textarea-size {
+    flex-grow: 1;
     display: flex;
     gap: 0.2rem;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
-    margin: -0.05rem 0 0.2rem;
+    margin: 0;
+    padding: 0 0.5rem;
 }
 
 :is(#edit-page-form, #new-post-form) > .change-textarea-size > a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 1.2rem;
-    height: 1.8rem;
-    background-color: rgb(var(--light-ui-bg));
-    color: rgb(var(--light-ui-txt));
-    border: var(--global-border-width) solid rgb(var(--global-border));
+    height: 1.5rem;
+    border-top: unset;
     box-sizing: border-box;
-    transition: background var(--global-duration), color var(--global-duration);
-}
-
-:is(#edit-page-form, #new-post-form) > .change-textarea-size > a:is(:hover, :focus) {
-    background-color: rgb(var(--bright-ui-bg));
-    color: rgb(var(--bright-ui-txt));
-    transition: background var(--global-hover-duration), color var(--global-hover-duration);
 }
 
 /* 编辑区：页面预览提示框 */
