@@ -363,7 +363,7 @@ select {
     transition: background var(--global-hover-duration), color var(--global-hover-duration);
 }
 
-.btn:not(span, #login-status *, .owindow .button-bar > a[onclick*=cleanAll]) {
+.btn:not(span, #login-status *, .owindow .button-bar > a[onclick*=cleanAll]), a.action-area-close {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -377,7 +377,7 @@ select {
     transition: background var(--global-duration), color var(--global-duration);
 }
 
-.btn:not(span, #login-status *, .owindow .button-bar > a[onclick*=cleanAll]):is(:hover, :focus) {
+.btn:not(span, #login-status *, .owindow .button-bar > a[onclick*=cleanAll]):is(:hover, :focus), a.action-area-close:is(:hover, :focus) {
     background: rgb(var(--btn-hover-bg));
     color: rgb(var(--btn-hover-txt));
     transition: background var(--global-hover-duration), color var(--global-hover-duration);
@@ -1630,7 +1630,7 @@ code, .code, .code pre, .code p, tt, .page-source {
 
 .code {
     margin: 1rem 0;
-    padding: 0;
+    padding: 0 1rem;
     background: rgb(var(--light-block-bg));
     color: rgb(var(--light-block-txt));
     border: var(--global-border-width) dashed rgb(var(--global-border));
@@ -1988,18 +1988,22 @@ form#history-form-1 table.form tr:last-of-type td:last-of-type::after {
     grid-column: 4 / 5;
     grid-row: 1 / 2;
     justify-self: stretch;
-    border-bottom: var(--global-border-width) solid rgb(var(--global-border));
 }
 
 #revision-list .page-history tr[id*=revision-row] td:nth-child(6) {
     grid-column: 3 / 4;
-    grid-row: 1 / 3;
+    grid-row: 1 / 2;
 }
 
 #revision-list .page-history tr[id*=revision-row] td:nth-child(7) {
-    grid-column: 4 / 5;
+    grid-column: 3 / 5;
     grid-row: 2 / 3;
     justify-self: stretch;
+    border-top: var(--global-border-width) solid rgb(var(--global-border));
+}
+
+#history-subarea {
+    position: relative;
 }
 
 .inline-diff.page-source :is(ins,del) {
