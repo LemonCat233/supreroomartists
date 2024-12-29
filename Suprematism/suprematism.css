@@ -1270,6 +1270,10 @@ div.page-rate-widget-box .rate-points {
     background: rgb(var(--cancel-txt));
 }
 
+.rate-box-with-credit-button .creditButton p {
+    font-size: inherit;
+}
+
 .rate-box-with-credit-button .creditButton a, #page-content .creditButtonStandalone p a {
     --mask-repeat: no-repeat;
     --mask-size: 90%;
@@ -1579,6 +1583,7 @@ hr {
     left: 0;
     width: 100%;
     height: var(--toc-heading-height);
+    border-bottom: var(--global-border-width) solid rgb(var(--global-border));
     box-sizing: border-box;
     z-index: 1;
 }
@@ -1611,6 +1616,7 @@ code, .code, .code pre, .code p, tt, .page-source {
 
 .code {
     margin: 1rem 0;
+    padding: 0;
     background: rgb(var(--light-block-bg));
     color: rgb(var(--light-block-txt));
     border: var(--global-border-width) dashed rgb(var(--global-border));
