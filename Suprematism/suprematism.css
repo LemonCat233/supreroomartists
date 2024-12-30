@@ -1182,6 +1182,11 @@ div.page-rate-widget-box .rate-points {
     height: 100%;
     background: transparent;
     border: unset;
+    transition: background var(--global-duration);
+}
+
+.page-rate-widget-box :is(.rateup, .ratedown, .cancel):is(:hover, :focus), .rate-box-with-credit-button .creditButton:is(:hover, :focus) {
+    transition: background var(--global-hover-duration);
 }
 
 .page-rate-widget-box :is(.rateup, .ratedown, .cancel) a, .rate-box-with-credit-button .creditButton a, #page-content .creditButtonStandalone p a {
@@ -1288,8 +1293,13 @@ div.page-rate-widget-box .rate-points {
     -webkit-mask-position: var(--mask-position);
 }
 
+.rate-box-with-credit-button .creditButton, #page-content .creditButtonStandalone p {
+    transition: background var(--global-duration);
+}
+
 .rate-box-with-credit-button .creditButton:is(:hover, :focus), #page-content .creditButtonStandalone p:is(:hover, :focus) {
     background: rgb(var(--info-bg));
+    transition: background var(--global-hover-duration);
 }
 
 .rate-box-with-credit-button .creditButton:is(:hover, :focus) a, #page-content .creditButtonStandalone p:is(:hover, :focus) a {
