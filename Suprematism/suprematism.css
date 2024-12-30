@@ -270,11 +270,11 @@ a.newpage {
     color: rgb(var(--link-newpage));
 }
 
-table.form {
+form {
     margin: 0 auto;
 }
 
-table.form td {
+form td {
     vertical-align: top;
 }
 
@@ -362,7 +362,7 @@ select {
     transition: background var(--global-hover-duration), color var(--global-hover-duration);
 }
 
-.btn:not(.page-rate-widget-box *, #login-status *, .owindow .button-bar > a[onclick*=cleanAll]), a.action-area-close {
+.btn:not(.page-rate-widget-box *, #login-status *, .owindow .button-bar > a[onclick*=cleanAll]), a.action-area-close, .site-tools-box ul.nav.nav-pills a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -376,7 +376,7 @@ select {
     transition: background var(--global-duration), color var(--global-duration);
 }
 
-.btn:not(.page-rate-widget-box *, #login-status *, .owindow .button-bar > a[onclick*=cleanAll]):is(:hover, :focus), a.action-area-close:is(:hover, :focus) {
+.btn:not(.page-rate-widget-box *, #login-status *, .owindow .button-bar > a[onclick*=cleanAll]):is(:hover, :focus), a.action-area-close:is(:hover, :focus), .site-tools-box ul.nav.nav-pills a:is(:hover, :focus) {
     background: rgb(var(--btn-hover-bg));
     color: rgb(var(--btn-hover-txt));
     transition: background var(--global-hover-duration), color var(--global-hover-duration);
@@ -1656,7 +1656,7 @@ table {
     margin: auto;
 }
 
-table:is(.wiki-content-table, .page-compare) {
+table:is(.wiki-content-table, .page-compare, table.form.grid) {
     max-width: 100%;
     margin: 1rem auto;
     border: var(--global-border-width) solid rgb(var(--global-border));
@@ -1664,7 +1664,7 @@ table:is(.wiki-content-table, .page-compare) {
     border-collapse: collapse;
 }
 
-:is(#page-content .wiki-content-table, .page-compare) tr th {
+:is(#page-content .wiki-content-table, .page-compare, table.form.grid) tr th {
     padding: 0.5rem 1rem;
     background-color: rgb(var(--th-bg));
     color: rgb(var(--th-txt));
@@ -1672,7 +1672,7 @@ table:is(.wiki-content-table, .page-compare) {
     border-bottom: var(--global-border-width) solid rgb(var(--global-border));
 }
 
-:is(#page-content .wiki-content-table, .page-compare) tr td {
+:is(#page-content .wiki-content-table, .page-compare, table.form.grid) tr td {
     padding: 0.5rem 1rem;
     background-color: rgb(var(--td-bg));
     color: rgb(var(--td-txt));
@@ -1888,36 +1888,36 @@ div#who-rated-page-area div {
     width: 100%;
 }
 
-form#history-form-1 table.form {
+form#history-form-1 form {
     width: 100%;
 }
 
-form#history-form-1 table.form tr {
+form#history-form-1 form tr {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
-form#history-form-1 table.form tr:first-of-type td:first-of-type {
+form#history-form-1 form tr:first-of-type td:first-of-type {
     border-bottom: var(--global-border-width) solid rgb(var(--global-border));
 }
 
-form#history-form-1 table.form tr:first-of-type td:last-of-type {
+form#history-form-1 form tr:first-of-type td:last-of-type {
     display: grid;
     grid-template-columns: repeat(auto-fill, 1rem minmax(8rem, 1fr));
     align-items: center;
 }
 
-form#history-form-1 table.form tr:last-of-type {
+form#history-form-1 form tr:last-of-type {
     flex-direction: row;
     justify-content: center;
 }
 
-form#history-form-1 table.form tr:last-of-type td:last-of-type{
+form#history-form-1 form tr:last-of-type td:last-of-type{
     position: relative;
 }
 
-form#history-form-1 table.form tr:last-of-type td:last-of-type::after {
+form#history-form-1 form tr:last-of-type td:last-of-type::after {
     content: "\F282";
     display: flex;
     justify-content: center;
@@ -2092,6 +2092,7 @@ table.form td div.sub, form div.sub {
     display: flex;
     justify-content: center;
     gap: 0.5rem;
+    margin: 0;
 }
 
 ul.nav.nav-pills li {
