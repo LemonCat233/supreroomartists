@@ -2985,7 +2985,7 @@ p#flag-user-options-flag {
     gap: 0.5rem;
 }
 
-.flag-user-ok {
+.unflag-user-ok {
     --btn-txt: var(--accept-color);
     --global-border: var(--accept-color);
     --btn-hover-bg: var(--accept-color);
