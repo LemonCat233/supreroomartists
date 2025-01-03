@@ -1891,6 +1891,8 @@ table:is(.wiki-content-table, .page-compare, table.form.grid) {
 
 #page-info {
     flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #page-options-container .page-options-bottom {
