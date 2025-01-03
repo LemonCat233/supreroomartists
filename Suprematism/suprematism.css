@@ -175,7 +175,7 @@
     --banner-title-size: calc(2.5rem + 3vw);
     --banner-subtitle-size: 1rem;
 
-    --rate-height: 1.2rem;
+    --rate-height: calc(var(--global-font-size) * 1.5);
 
     --toc-min-width: 12.5rem;
     --toc-heading-height: 2rem;
@@ -1221,6 +1221,10 @@ div.page-rate-widget-box .rate-points {
     transition: background var(--global-duration);
 }
 
+.page-rate-widget-box :is(.rateup, .ratedown, .cancel) a {
+    --mask-size: var(--global-font-size);
+}
+
 .page-rate-widget-box :is(.rateup, .ratedown, .cancel):is(:hover, :focus) a, 
 .rate-box-with-credit-button .creditButton:is(:hover, :focus) a {
     display: block;
@@ -1231,7 +1235,6 @@ div.page-rate-widget-box .rate-points {
 
 .page-rate-widget-box .rateup a {
     --mask-repeat: no-repeat;
-    --mask-size: 75%;
     --mask-position: center;
     mask-image: var(--rateup);
     mask-repeat: var(--mask-repeat);
@@ -1253,7 +1256,6 @@ div.page-rate-widget-box .rate-points {
 
 .page-rate-widget-box .ratedown a {
     --mask-repeat: no-repeat;
-    --mask-size: 75%;
     --mask-position: center;
     mask-image: var(--ratedown);
     mask-repeat: var(--mask-repeat);
@@ -1275,7 +1277,6 @@ div.page-rate-widget-box .rate-points {
 
 .page-rate-widget-box .cancel a {
     --mask-repeat: no-repeat;
-    --mask-size: 75%;
     --mask-position: center;
     mask-image: var(--cancel);
     mask-repeat: var(--mask-repeat);
@@ -1302,7 +1303,7 @@ div.page-rate-widget-box .rate-points {
 .rate-box-with-credit-button .creditButton a, 
 #page-content .creditButtonStandalone p a {
     --mask-repeat: no-repeat;
-    --mask-size: 90%;
+    --mask-size: calc(var(--global-font-size)* 1.3);
     --mask-position: center;
     mask-image: var(--info);
     mask-repeat: var(--mask-repeat);
@@ -1781,6 +1782,10 @@ table:is(.wiki-content-table, .page-compare, table.form.grid) {
     font-size: 0.8rem;
 }
 
+.licensebox a.collapsible-block-link {
+    font-size: inherit;
+}
+
 .shadebox {
     margin: 2rem 0;
     background: rgba(var(--light-block-bg), 0.4);
@@ -1880,7 +1885,8 @@ table:is(.wiki-content-table, .page-compare, table.form.grid) {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 0.25rem;
+    gap: 0;
+    padding-bottom: 0.25rem;
 }
 
 #page-info {
@@ -1891,13 +1897,26 @@ table:is(.wiki-content-table, .page-compare, table.form.grid) {
     flex-grow: 1;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 0.25rem;
+    gap: 0;
     width: 100%;
+    border: var(--global-border-width) solid rgb(var(--global-border));
+    border-bottom: none;
+}
+
+#page-options-container #page-options-bottom-2 {
+    border-top: none;
+}
+
+#page-options-container .page-options-bottom a {
+    border-left: none;
+    border-right: none;
+    border-top: none;
 }
 
 a#more-options-button {
     grid-column: 5 / 6;
     grid-row: 1 / 3;
+    border-left: var(--global-border-width) solid rgb(var(--global-border));
 }
 
 #action-area {
@@ -3212,12 +3231,13 @@ p#flag-user-options-flag {
     }
 
     #page-options-container .page-options-bottom {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     a#more-options-button {
-        grid-column: 1 / 5;
-        grid-row: 3 / 4;
+        grid-column: 1 / 3;
+        grid-row: 5 / 6;
+        border-left: unset;
     }
 
     div.owindow > div.content > table {
