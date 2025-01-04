@@ -1297,7 +1297,7 @@ div.page-rate-widget-box .rate-points {
 }
 
 .rate-box-with-credit-button .creditButton p {
-    font-size: inherit;
+    display: contents;
 }
 
 .rate-box-with-credit-button .creditButton a, 
