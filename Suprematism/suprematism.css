@@ -1410,7 +1410,6 @@ div.page-rate-widget-box .rate-points {
 .licensebox a.collapsible-block-link {
     opacity: 0.75;
     color: inherit;
-    font-size: 0.8rem;
     transition: opacity var(--global-duration);
 }
 
@@ -1779,11 +1778,8 @@ table:is(.wiki-content-table, .page-compare, table.form.grid) {
 }
 
 .footer-wikiwalk-nav {
+    font-family: var(--ui-font);
     font-size: 0.8rem;
-}
-
-.licensebox a.collapsible-block-link {
-    font-size: inherit;
 }
 
 .shadebox {
