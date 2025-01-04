@@ -2236,7 +2236,7 @@ ul.nav.nav-pills li a {
 }
 
 #edit-page-comments {
-    width: 100%;
+    width: 100%!important;
     max-width: 100%;
 }
 
