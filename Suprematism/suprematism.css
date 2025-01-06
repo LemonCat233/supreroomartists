@@ -3230,6 +3230,7 @@ p#flag-user-options-flag {
 
     #page-options-container .page-options-bottom {
         grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, auto);
     }
 
     #page-options-container .page-options-bottom a#more-options-button {
