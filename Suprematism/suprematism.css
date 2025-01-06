@@ -1905,13 +1905,13 @@ table:is(.wiki-content-table, .page-compare, table.form.grid) {
     border-top: none;
 }
 
-#page-options-container .page-options-bottom a {
+.page-options-bottom a {
     border-left: none;
     border-right: none;
     border-top: none;
 }
 
-#page-options-container .page-options-bottom a#more-options-button {
+.page-options-bottom a#more-options-button {
     grid-column: 5 / 6;
     grid-row: 1 / 3;
     border-left: var(--global-border-width) solid rgb(var(--global-border));
