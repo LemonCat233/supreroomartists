@@ -1,1 +1,1 @@
-# suprematism.github.io
+# 欢迎来到 至上主义！
