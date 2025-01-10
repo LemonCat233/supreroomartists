@@ -255,6 +255,7 @@ body {
 a {
     color: rgb(var(--link-primary));
     transition: color var(--global-duration);
+    background: unset;
 }
 
 a:visited {
@@ -264,6 +265,7 @@ a:visited {
 a:hover {
     color: rgb(var(--link-hover));
     transition: color var(--global-hover-duration);
+    background: unset;
 }
 
 a.newpage {
