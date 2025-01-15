@@ -1072,6 +1072,10 @@ a.action-area-close:is(:hover, :focus),
     content: "\F235";
 }
 
+#side-bar .side-block.media, #side-bar .side-block.resources {
+    background: unset;
+}
+
 #side-bar .side-block.media > div[style="text-align: center;"] {
     display: flex;
     justify-content: space-evenly;
