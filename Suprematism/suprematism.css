@@ -1883,6 +1883,10 @@ table:is(.wiki-content-table, .page-compare, table.form.grid) {
     font-family: var(--ui-font);
 }
 
+#main-content .page-tags [href^="/system:page-tags/tag/_"] {
+    display: none;
+}
+
 
 /* ———— 11. 工具栏与活动区域 ———— */
 #page-options-container {
