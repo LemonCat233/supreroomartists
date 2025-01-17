@@ -324,7 +324,7 @@ input[type=checkbox] {
 
 [type=checkbox]::before {
     content: "\F272";
-    font-family: bootstrap-icons !important;
+    font-family: bootstrap-icons;
     font-style: normal;
     font-weight: normal !important;
     font-variant: normal;
@@ -2002,9 +2002,9 @@ form#history-form-1 .form tr:last-of-type td:last-of-type::after {
     height: 100%;
     width: 1.2rem;
     color: inherit;
-    font-family: bootstrap-icons !important;
+    font-family: bootstrap-icons;
     font-style: normal;
-    font-weight: normal !important;
+    font-weight: normal;
     font-variant: normal;
     text-transform: none;
     line-height: 1;
@@ -2485,7 +2485,6 @@ button, a.button {
 /* 图标：下划线 */
 :is(#action-area > div:not(#view-diff-div, preview-message) > form#edit-page-form > .wd-editor-toolbar-panel, #new-post-div > form#new-post-form .wd-editor-toolbar-panel) .weditor-underline::before {
     content: "\F5F6";
-/*    align-items: baseline; */
 }
 
 /* 图标：删除线 */
@@ -2507,19 +2506,16 @@ button, a.button {
 /* 图标：上标 */
 :is(#action-area > div:not(#view-diff-div, preview-message) > form#edit-page-form > .wd-editor-toolbar-panel, #new-post-div > form#new-post-form .wd-editor-toolbar-panel) .weditor-superscript::before {
     content: "\F849";
-/*    align-items: baseline; */
 }
 
 /* 图标：下标 */
 :is(#action-area > div:not(#view-diff-div, preview-message) > form#edit-page-form > .wd-editor-toolbar-panel, #new-post-div > form#new-post-form .wd-editor-toolbar-panel) .weditor-subscript::before {
     content: "\F848";
-/*    align-items: baseline; */
 }
 
 /* 图标：原始 */
 :is(#action-area > div:not(#view-diff-div, preview-message) > form#edit-page-form > .wd-editor-toolbar-panel, #new-post-div > form#new-post-form .wd-editor-toolbar-panel) .weditor-raw::before {
     content: "\F152";
-/*    align-items: baseline; */
 }
 
 /* 图标：第二组 */
