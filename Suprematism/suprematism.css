@@ -516,7 +516,7 @@ a.action-area-close:is(:hover, :focus),
     position: absolute;
     top: 100%;
     left: 0;
-    width: 100%;
+    width: auto;
     margin: 0;
     padding: 0;
     color: rgb(var(--dropdown-txt));
@@ -528,6 +528,11 @@ a.action-area-close:is(:hover, :focus),
     transition: opacity var(--global-duration);
 }
 
+#top-bar > div > ul > li:last-of-type > ul {
+    left: auto;
+    right: 0;
+}
+
 #top-bar > div > ul > li:is(:hover, :focus, .sfhover, :focus-within)  > ul {
     visibility: visible;
     opacity: 1;
@@ -537,7 +542,7 @@ a.action-area-close:is(:hover, :focus),
 
 #top-bar > div > ul > li  > ul > li {
     position: static;
-    width: 100%;
+    width: auto;
     margin: 0;
     padding: 0;
     border: unset;
@@ -567,8 +572,6 @@ a.action-area-close:is(:hover, :focus),
     padding: 0 0.5rem;
     font-size: var(--dropdown-size);
     white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
     text-align: center;
 }
 
