@@ -1962,36 +1962,36 @@ div#who-rated-page-area div {
     width: 100%;
 }
 
-form#history-form-1 form {
+form#history-form-1 .form {
     width: 100%;
 }
 
-form#history-form-1 form tr {
+form#history-form-1 .form tr {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
-form#history-form-1 form tr:first-of-type td:first-of-type {
+form#history-form-1 .form tr:first-of-type td:first-of-type {
     border-bottom: var(--global-border-width) solid rgb(var(--global-border));
 }
 
-form#history-form-1 form tr:first-of-type td:last-of-type {
+form#history-form-1 .form tr:first-of-type td:last-of-type {
     display: grid;
     grid-template-columns: repeat(auto-fill, 1rem minmax(8rem, 1fr));
     align-items: center;
 }
 
-form#history-form-1 form tr:last-of-type {
+form#history-form-1 .form tr:last-of-type {
     flex-direction: row;
     justify-content: center;
 }
 
-form#history-form-1 form tr:last-of-type td:last-of-type{
+form#history-form-1 .form tr:last-of-type td:last-of-type{
     position: relative;
 }
 
-form#history-form-1 form tr:last-of-type td:last-of-type::after {
+form#history-form-1 .form tr:last-of-type td:last-of-type::after {
     content: "\F282";
     display: flex;
     justify-content: center;
