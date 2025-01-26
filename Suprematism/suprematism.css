@@ -1077,7 +1077,7 @@ a.action-area-close:is(:hover, :focus),
 }
 
 #side-bar .side-block.media, #side-bar .side-block.resources {
-    background: unset;
+    background: rgb(var(--sidebar-bg));
 }
 
 #side-bar .side-block.media > div[style="text-align: center;"] {
