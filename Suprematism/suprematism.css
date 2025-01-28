@@ -980,6 +980,8 @@ a.action-area-close:is(:hover, :focus),
 }
 
 :is(#side-bar, #interwiki) .side-block {
+    margin: 0;
+    padding: 0;
     background: transparent;
     border: unset;
 }
@@ -1001,6 +1003,8 @@ a.action-area-close:is(:hover, :focus),
 }
 
 :is(#side-bar, #interwiki) .menu-item {
+    margin: 0;
+    padding: 0;
     background: rgb(var(--menu-bg));
     color: rgb(var(--menu-txt));
     border-bottom: var(--global-border-width) solid rgb(var(--heading-border));
