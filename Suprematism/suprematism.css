@@ -168,7 +168,8 @@
     --dropdown-border-width: var(--global-border-width);
 
     --global-font-size: 0.975rem;
-
+    --global-final-size: min(var(--global-font-size), calc(0.8rem + 0.2vw));
+    
     --header-title-size: calc(0.5rem + 1.6vw);
     --topbar-size: calc(0.5rem + 0.5vw);
     --dropdown-size: var(--topbar-size);
@@ -238,7 +239,7 @@ body {
     color: rgb(var(--body-txt));
 
     font-family: var(--body-font);
-    font-size: var(--global-font-size);
+    font-size: var(--global-final-size);
 
     overflow-wrap: break-word;
     word-break: break-word;
