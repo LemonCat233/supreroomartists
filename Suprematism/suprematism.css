@@ -1113,6 +1113,7 @@ a.action-area-close:is(:hover, :focus),
 #main-content .page-tags, 
 #breadcrumbs {
     margin: 0.5rem 0;
+    padding: 0;
 }
 
 #breadcrumbs {
