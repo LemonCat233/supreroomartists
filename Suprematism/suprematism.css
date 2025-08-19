@@ -653,6 +653,7 @@ a.action-area-close:is(:hover, :focus),
     background: rgba(var(--user-bg));
     font-size: 0;
     cursor: pointer;
+    overflow: visible;
     transition: background var(--global-duration);
 }
 
