@@ -472,6 +472,7 @@ a.action-area-close:is(:hover, :focus),
     background: rgba(var(--topbar-bg));
     color: rgb(var(--topbar-txt));
     font-family: var(--ui-font);
+    box-sizing: border-box;
 }
 
 #top-bar > div > ul {
@@ -843,6 +844,7 @@ a.action-area-close:is(:hover, :focus),
     align-items: center;
     height: 100%;
     padding: 0 0 0 calc((var(--header-ui-size) / 1.5));
+    box-sizing: border-box;
 }
 
 #header h1 a span {
@@ -1123,6 +1125,7 @@ a.action-area-close:is(:hover, :focus),
 
 #page-title {
     margin: 1rem 0;
+    padding: 0;
     font-family: var(--title-font);
     font-size: 1.8rem;
     text-align: center;
