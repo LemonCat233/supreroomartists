@@ -449,6 +449,7 @@ a.action-area-close:is(:hover, :focus),
     height: calc(var(--header-height) + var(--topbar-height));
     background: linear-gradient(to top, rgba(var(--header-bg), .8), rgba(var(--header-bg), 1));
     backdrop-filter: blur(0.1rem);
+    -webkit-backdrop-filter: blur(0.1rem);
     z-index: 9;
     border-bottom: 0.1rem solid rgba(var(--topbar-border));
 }
@@ -526,6 +527,7 @@ a.action-area-close:is(:hover, :focus),
     border: var(--dropdown-border-width)  solid rgba(var(--dropdown-border));
     box-sizing: border-box;
     backdrop-filter: blur(0.1rem);
+    -webkit-backdrop-filter: blur(0.1rem);
     opacity: 0;
     pointer-events: none;
     transition: opacity var(--global-duration);
@@ -1368,6 +1370,7 @@ div.page-rate-widget-box .rate-points {
 :is(#u-credit-view, #u-credit-otherwise) .fader {
     background: rgba(var(--global-fader-bg));
     backdrop-filter: blur(0.1rem);
+    -webkit-backdrop-filter: blur(0.1rem);
 }
 
 :is(#u-credit-view,div#u-credit-otherwise) .modalcontainer {
@@ -1850,6 +1853,7 @@ table:is(.wiki-content-table, .page-compare, table.form.grid) {
     color: rgb(var(--light-ui-txt));
     background-color: rgba(var(--light-ui-bg), .8) !important;
     backdrop-filter: blur(0.1rem);
+    -webkit-backdrop-filter: blur(0.1rem);
 }
 
 .hovertip .content {
@@ -2950,6 +2954,7 @@ button, a.button {
     align-items: center;
     background: rgba(var(--global-fader-bg));
     backdrop-filter: blur(0.1rem);
+    -webkit-backdrop-filter: blur(0.1rem);
 }
 
 .owindow {
@@ -3152,6 +3157,7 @@ p#flag-user-options-flag {
     border: var(--global-border-width) solid rgb(var(--global-border));
     box-sizing: border-box;
     backdrop-filter: blur(.1rem);
+    -webkit-backdrop-filter: blur(.1rem);
     z-index: 1;
     animation: 3s ease-in-out owait infinite reverse;
 }
