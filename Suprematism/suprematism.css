@@ -3221,6 +3221,163 @@ p#flag-user-options-flag {
 }
 
 
+/* —————— 兼容：排版工具组 2.0 —————— */
+/* 01. 文字修饰类 */
+:root {
+    --lh-highlighter: var(--dark-ui-bg);
+}
+
+.text-hoverback, 
+.text-selectback {
+    /* 修复模糊文字动画缺失问题 */
+    transition-duration: 0.3s;
+    transition-property: background, transform, color, filter;
+}
+
+.text-blank.text-hoverback:hover, 
+.text-blank.text-selectback::selection, 
+.text-blank.text-selectback *::selection {
+    /* 选中时会出现的文字 */
+    color: rgb(var(--global-txt));
+}
+
+.text-block {
+    /* 黑块文字 */
+    background: rgb(var(--global-txt));
+    color: rgb(var(--global-txt));
+}
+
+.text-block.text-selectback::selection,
+.text-block.text-selectback *::selection {
+    /* 选中时会出现的黑块文字 */
+    color: rgb(var(--global-bg));
+}
+
+/* 02. 提示框 */
+.infoblock {
+    display: block;
+    width: fit-content;
+    margin: -0.5rem 0 1rem 0;
+    padding: 0.25rem;
+    padding-right: 1.25rem;
+    background: rgb(var(--global-txt));
+    color: rgb(var(--global-bg));
+    border-radius: 0.25rem;
+    font-family: var(--header-font);
+    font-weight: bold;
+}
+
+.infoblock::before {
+    content: "ⓘ";
+    margin-right: 0.25rem;
+}
+
+.infoblock.with-bg-red {
+    background: rgb(var(--warning-color)) !important;
+}
+
+/* 03. 便签纸 */
+:root {
+    --lh-string-color: var(--warning-color);
+    --lh-book-color: var(--dark-ui-bg);
+}
+
+.notepaper {
+    background-image: linear-gradient(
+        rgb(var(--lh-paper-bg)) 95%, 
+        rgb(var(--light-ui-bg)) 0
+        );
+}
+
+.notepaper.with-tape::before {
+    border: 1px solid rgb(var(--light-ui-bg));
+}
+
+/* 04. 维基笔记 */
+:root {
+    --lh-wiki-note-color: var(--dark-ui-bg);
+}
+
+div.wiki-note::before {
+    color: rgb(var(--global-bg));
+}
+
+/* 05. 告示 */
+.signblock-warn, 
+.signblock-warn h1 {
+    background: rgb(var(--warning-color));
+}
+
+/* 06. 报告 */
+.reportblock, 
+.reportblock-dark {
+    background: rgb(var(--global-bg));
+    border: 2px solid rgb(var(--global-txt));
+}
+
+.reportblock-dark, 
+.reportblock-dark h1 {
+    background: rgb(var(--global-txt));
+    color: rgb(var(--dark-ui-txt));
+    border-color: rgb(var(--global-bg));
+}
+
+.reportblock h1:first-child, 
+.reportblock-dark h1:first-child {
+    background: rgb(var(--dark-ui-bg));
+    color: rgb(var(--dark-ui-txt));
+}
+
+/* 07. 更好的折叠框 */
+.bettercollap .collapsible-block {
+    border: 1px solid rgb(var(--global-txt));
+}
+
+.bettercollap .collapsible-block-content, 
+.bettercollap .collapsible-block-link {
+  background: rgb(var(--global-bg));
+}
+
+.bettercollap .collapsible-block-link {
+  background: rgb(var(--global-bg));
+  color: rgb(var(--global-txt));
+}
+
+.bettercollap .collapsible-block-link:hover, 
+.bettercollap .collapsible-block-unfolded .collapsible-block-link, 
+.styledcollap.bettercollap .collapsible-block-link {
+  background: rgb(var(--global-txt)) !important;
+  color: rgb(var(--global-bg));
+}
+
+.bettercollap .collapsible-block-link:hover a {
+  color: rgb(var(--global-bg));
+}
+
+.styledcollap.bettercollap .collapsible-block-content {
+  background-color: rgb(var(--light-ui-bg));
+}
+
+.styledcollap.bettercollap .collapsible-block-link:hover {
+  background: rgba(var(--dark-ui-bg), 0.95) !important;
+}
+
+/* 08. 附加类 */
+.with-border, 
+.with-box-style {
+    border: 1px solid rgb(var(--dark-ui-bg));
+}
+
+.with-border-dark {
+    border: 1px solid rgb(var(--global-txt));
+}
+
+.with-border-light {
+    border: 1px solid rgb(var(--light-ui-bg));
+}
+
+
+
 
 
 /* ———— 移动端适配  ———— */
