@@ -403,7 +403,7 @@ a.action-area-close:is(:hover, :focus),
     text-indent: 0;
 }
 
-. printuser a {
+.printuser a {
     margin-right: 0;
 }
 
@@ -2731,7 +2731,7 @@ button, a.button {
     width: 50%;
     height: 50%;
     font-size: calc(1.6rem * 0.75);
-    fton-weight: bold;
+    font-weight: bold;
 }
 
 /* 图标：减少列表层级 */
@@ -2753,7 +2753,7 @@ button, a.button {
     width: 50%;
     height: 50%;
     font-size: calc(1.6rem * 0.75);
-    fton-weight: bold;
+    font-weight: bold;
 }
 
 /* 图标：定义列表 */
