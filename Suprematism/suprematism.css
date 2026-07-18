@@ -2,7 +2,7 @@
 
 
 /* ———— 0. 引入 ———— */
-/* 字体 */
+/* 引入：字体 */
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap');
@@ -15,13 +15,14 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
 @import url("https://chinese-fonts-cdn.deno.dev/packages/zqfs/dist/ZhuqueFangsong-Regular/result.css");
 
-/* 图标库 */
+/* 引入：图标库 */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css");
 
 
 /* ———— 1. 全局 ———— */
+/* 全局：变量 */
 :root {
-    /* 图片和颜色 */
+    /* 一级色彩变量 */
     --global-white-color: 248, 248, 248;
     --global-pale-color: 235, 235, 235;
     --global-light-color: 180, 180, 180;
@@ -35,6 +36,7 @@
     --accept-color: 20, 169, 32;
     --neutral-color: 193, 147, 44;
 
+    /* 二级色彩变量 */
     --global-bg: var(--global-white-color);
     --global-txt: var(--global-black-color);
     --light-ui-bg: var(--global-pale-color);
@@ -51,6 +53,7 @@
     --link-visited: var(--global-accent-3);
     --link-newpage: var(--alt-color);
 
+    /* 三级色彩变量 */
     --body-bg: var(--global-bg);
     --body-txt: var(--global-txt);
 
@@ -181,7 +184,7 @@
     --toc-min-width: 12.5rem;
     --toc-heading-height: 2rem;
 
-    /* 自定义动画时间 */
+    /* 过渡动画时间 */
     --global-duration: 0.4s;
     --global-hover-duration: 0.2s;
 
@@ -197,15 +200,14 @@
     --search-icon: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='47.5' cy='52.5' r='30' stroke-width='15'/%3E%3Cpath stroke-width='14.78' d='M75.045 74.89L99.95 99.794l-.156.156L74.89 75.045z'/%3E%3C/g%3E%3C/svg%3E");
     /* 未登录用户图标 */
     --user-icon: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M60 19.113a20 20 0 0 0-20 20 20 20 0 0 0 20 20 20 20 0 0 0 20-20 20 20 0 0 0-20-20zm0 45a40 40 0 0 0-37.936 27.543A50 50 0 0 0 60 109.113a50 50 0 0 0 37.979-17.516A40 40 0 0 0 60 64.113z'/%3E%3Ccircle cx='60' cy='60' r='54.1' fill='none' stroke='%23000' stroke-width='11.799' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-    /* uv按钮图标 */
+    /* uv 按钮图标 */
     --rateup: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 55h100v10H10z'/%3E%3Cpath d='M65 10v100H55V10z'/%3E%3C/svg%3E");
-    /* dv按钮图标 */
+    /* dv 按钮图标 */
     --ratedown: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 55h100v10H10z'/%3E%3C/svg%3E");
     /* 取消图标 */
     --cancel: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 102.178L102.178 10 110 17.82 17.82 110z'/%3E%3Cpath d='M17.822 10L110 102.178 102.18 110 10 17.82z'/%3E%3C/svg%3E");
-    /* 著作信息 “i” 按钮 */
+    /* 著作信息“i”按钮 */
     --info: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M55 45h10v50H55zM55 25h10v10H55zM45 45h10v10H45zM45 85h10v10H45zM65 85h10v10H65z'/%3E%3C/svg%3E");
-
 
     /* 字体 */
     --banner-font: "Alumni Sans Pinstripe", "Zhuque Fangsong (technical preview)", Franklin Gothic Medium, Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
@@ -216,6 +218,7 @@
     --mono-font: "PT Mono", "Noto Serif SC", "Noto Serif TC", Consolas, monaco, monospace;
 }
 
+/* 全局：滚动条样式 */
 * {
     scrollbar-width: thin;
     scrollbar-color: rgb(var(--scrollbar-thumb)) rgba(var(--scrollbar-track));
@@ -234,6 +237,7 @@
     background-color: rgb(var(--scrollbar-thumb));
 }
 
+/* 全局：页面主体样式与文本样式初始化 */
 body {
     background: rgb(var(--body-bg));
     color: rgb(var(--body-txt));
@@ -273,6 +277,7 @@ a.newpage {
     color: rgb(var(--link-newpage));
 }
 
+/* 全局：页面编辑框之外的所有文本编辑框的 HTML 表单 */
 form {
     margin: 0 auto;
 }
@@ -281,6 +286,7 @@ form td {
     vertical-align: top;
 }
 
+/* 全局：文本编辑框 */
 input.text, 
 textarea, 
 select {
@@ -299,6 +305,7 @@ select:focus,
     transition: border var(--global-hover-duration), box-shadow var(--global-hover-duration);
 }
 
+/* 全局：下拉选框 */
 select {
     display: inline-flex;
     justify-content: center;
@@ -370,6 +377,7 @@ input[type=checkbox] {
     transition: background var(--global-hover-duration), color var(--global-hover-duration);
 }
 
+/* 全局：常规页面按钮 */
 .btn:not(.page-rate-widget-box *, #login-status *, .owindow .button-bar > a[onclick*=cleanAll]), 
 a.action-area-close, 
 .site-tools-box ul.nav.nav-pills a {
@@ -395,7 +403,7 @@ a.action-area-close:is(:hover, :focus),
 }
 
 
-/* 页面内的用户名 */
+/* 全局：wikidot 用户名语法 */
 .printuser {
     display: inline-flex;
     align-items: baseline;
@@ -440,6 +448,7 @@ a.action-area-close:is(:hover, :focus),
     pointer-events: auto;
 }
 
+/* 版头：背景样式 */
 #header-extra-div-1 {
     grid-column: 1 / 5;
     grid-row: 1 / 3;
@@ -476,6 +485,7 @@ a.action-area-close:is(:hover, :focus),
     box-sizing: border-box;
 }
 
+/* 顶栏：一级导航菜单 */
 #top-bar > div > ul {
     display: flex;
     height: var(--topbar-height);
@@ -511,6 +521,7 @@ a.action-area-close:is(:hover, :focus),
     transition: background calc(var(--global-hover-duration)), color calc(var(--global-hover-duration));
 }
 
+/* 顶栏：二级导航菜单 */
 #top-bar > div > ul > li > ul {
     display: flex;
     flex-direction: column;
@@ -580,12 +591,13 @@ a.action-area-close:is(:hover, :focus),
     text-align: center;
 }
 
+/* 顶栏：默认隐藏移动端顶栏 */
 #top-bar .mobile-top-bar {
     display: none;
 }
 
 
-/* ———— 4. 搜索 ———— */
+/* ———— 4. 搜索栏 ———— */
 #search-top-box {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
@@ -602,7 +614,7 @@ a.action-area-close:is(:hover, :focus),
     transition: background var(--global-hover-duration);
 }
 
-/* 搜索栏：html表单 */
+/* 搜索栏：HTML 表单 */
 #search-top-box #search-top-box-form {
     display: block;
     position: static;
@@ -610,12 +622,12 @@ a.action-area-close:is(:hover, :focus),
     height: 100%;
 }
 
-/* 搜索栏：输入框 */
+/* 搜索栏：文本输入框 */
 #search-top-box #search-top-box-form #search-top-box-input {
     display: none;
 }
 
-/* 搜索栏："搜索"按钮 */
+/* 搜索栏：“搜索”按钮 */
 #search-top-box-form input[type=submit] {
     --mask-repeat: no-repeat;
     --mask-size: 80% auto;
@@ -645,7 +657,7 @@ a.action-area-close:is(:hover, :focus),
 }
 
 
-/* ———— 5. 用户 ———— */
+/* ———— 5. 登录信息 ———— */
 #login-status {
     grid-column: 4 / 5;
     grid-row: 1 / 2;
@@ -670,11 +682,10 @@ a.action-area-close:is(:hover, :focus),
     position: relative;
     width: 100%;
     height: 100%;
-    /* 移除默认显示的用户名 */
-    font-size: 0;
+    font-size: 0; /* 移除默认显示的用户名 */
 }
 
-/* 用户：个人信息弹窗链接 */
+/* 登录信息：用户信息弹窗入口 */
 #login-status .printuser > a {
     position: absolute;
     top: 0;
@@ -690,31 +701,30 @@ a.action-area-close:is(:hover, :focus),
     background-color: transparent;
 }
 
-/* 用户：个人头像 */
+/* 登录信息：用户头像 */
 #login-status .printuser > a > img.small {
     padding: 0;
     width: calc(var(--fix-top-height) - var(--user-icon-padding) * 2);
     height: calc(var(--fix-top-height) - var(--user-icon-padding) * 2);
     box-sizing: border-box;
-    /* 移除Karma值 */
-    background-image: none !important;
+    background-image: none !important; /* 移除默认显示的 Karma 值 */
 }
 
 #login-status:hover .printuser > a > img.small {
     border: 2px solid rgba(var(--user-hover-icon-border-color));
 }
 
-/* 用户：“▼”按钮 */
-#login-status #account-topbutton {
-    display: none;
-}
-
-/* 用户：“我的账户”链接 */
+/* 登录信息：“我的账号”页面入口 */
 #login-status #my-account {
     display: none;
 }
 
-/* 用户：账号信息菜单 */
+/* 登录信息：下拉菜单“▼”按钮 */
+#login-status #account-topbutton {
+    display: none;
+}
+
+/* 登录信息：下拉菜单 */
 #login-status #account-options {
     display: block !important;
     position: absolute;
@@ -769,7 +779,7 @@ a.action-area-close:is(:hover, :focus),
     font-size: 0.9rem;
 }
 
-/* 用户：没登录的人会看到的版本 */
+/* 登录信息：未登录用户 */
 #login-status > span:not(.printuser) {
     --mask-repeat: no-repeat;
     --mask-size: 60%;
@@ -816,6 +826,7 @@ a.action-area-close:is(:hover, :focus),
     transition: background var(--global-duration);
 }
 
+/* 登录信息：“创建账户”按钮 */
 #login-status:is(:hover, :focus,:focus-within) .login-status-create-account {
     right: var(--user-drop-width);
 }
@@ -827,7 +838,7 @@ a.action-area-close:is(:hover, :focus),
 }
 
 
-/* ———— 6. 网站标题 ———— */
+/* ———— 6. 版头标题 ———— */
 #header h1 {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
@@ -930,11 +941,11 @@ a.action-area-close:is(:hover, :focus),
     transition: left var(--global-duration);
 }
 
+/* 侧栏：展开侧栏入口 */
 #side-bar::before {
     --mask-repeat: no-repeat;
     --mask-size: 80% 100%;
     --mask-position: center;
-
     content: "";
     display: block;
     position: fixed;
@@ -985,6 +996,7 @@ a.action-area-close:is(:hover, :focus),
     transition: left var(--global-hover-duration), background var(--global-hover-duration);
 }
 
+/* 侧栏：导航结构样式 */
 :is(#side-bar, #interwiki) .side-block {
     margin: 0;
     padding: 0;
@@ -992,6 +1004,7 @@ a.action-area-close:is(:hover, :focus),
     border: unset;
 }
 
+/* 侧栏：导航结构标题 */
 :is(#side-bar, #interwiki) .heading {
     margin: 0;
     padding: 0.2rem 0.5rem;
@@ -1008,6 +1021,7 @@ a.action-area-close:is(:hover, :focus),
     padding: 0;
 }
 
+/* 侧栏：导航结构内容 */
 :is(#side-bar, #interwiki) .menu-item {
     margin: 0;
     padding: 0;
@@ -1047,6 +1061,7 @@ a.action-area-close:is(:hover, :focus),
     transition: background var(--global-hover-duration), color var(--global-hover-duration);
 }
 
+/* 侧栏：导航结构折叠块样式 */
 #side-bar .collapsible-block a.collapsible-block-link {
     display: block;
     padding: 0.2rem 0.5rem;
@@ -1086,6 +1101,7 @@ a.action-area-close:is(:hover, :focus),
     content: "\F235";
 }
 
+/* 侧栏：导航结构外部媒体链接 */
 #side-bar .side-block.media, #side-bar .side-block.resources {
     background: rgb(var(--sidebar-bg));
 }
@@ -1103,7 +1119,7 @@ a.action-area-close:is(:hover, :focus),
 }
 
 
-/* ———— 9. 内容 ———— */
+/* ———— 9. 页面内容 ———— */
 #main-content {
     display:flex;
     flex-direction: column;
@@ -1140,7 +1156,7 @@ a.action-area-close:is(:hover, :focus),
     max-width: 100%;
 }
 
-/* 多级标题 */
+/* 页面内容：多级标题 */
 h1, h2, h3, h4, h5, h6 {
     color: inherit;
     font-family: var(--title-font);
@@ -1161,23 +1177,23 @@ h5 { font-size: 1rem; }
 
 h6 { font-size: 0.8rem; }
 
-/* 外部媒体内容 */
+/* 页面内容：外部媒体模块 */
 img, embed, video, object, iframe, table {
     max-width: 100%;
 }
 
-/* 著作信息评分组件 */
-.creditRate > .rateBox,
-.rate-box-with-credit-button > .page-rate-widget-box {
-    display: contents;
-}
-
+/* 页面内容：评分模块与著作信息评分组件 */
 #page-content .creditRate {
     float: none;
     transform: none;
     display: block;
     margin: 1rem 0;
     text-align: right;
+}
+
+.creditRate > .rateBox,
+.rate-box-with-credit-button > .page-rate-widget-box {
+    display: contents;
 }
 
 div.creditRate .rateBox {
@@ -1429,7 +1445,7 @@ div.page-rate-widget-box .rate-points {
     pointer-events: none;
 }
 
-/* 授权/引用模块 */
+/* 页面内容：“授权-引用”模块 */
 .licensebox a.collapsible-block-link {
     opacity: 0.75;
     color: inherit;
@@ -1441,7 +1457,7 @@ div.page-rate-widget-box .rate-points {
     transition: opacity var(--global-hover-duration);
 }
 
-/* 文字上面标注的小字（这东西就叫 ruby） */
+/* 页面内容：文字上面标注的小字（这东西就叫 ruby） */
 .rt, .ruby, rt, ruby {
     text-align: center;
 }
@@ -1458,7 +1474,7 @@ div.page-rate-widget-box .rate-points {
     line-height: 1.15;
 }
 
-/* 各种图片块 */
+/* 页面内容：图片块组件 */
 #page-content :is(.image-block, .scp-image-block), 
 #page-content :is(.image-block, .scp-image-block)  > * {
     width: 100%;
@@ -1493,7 +1509,7 @@ div.page-rate-widget-box .rate-points {
     margin: .5rem auto;
 }
 
-/* tab分页栏 */
+/* 页面内容：tabview 分页栏模块 */
 .yui-navset {
     display: flex;
     flex-direction: column;
@@ -1581,7 +1597,7 @@ div.page-rate-widget-box .rate-points {
     border: unset;
 }
 
-/* 分割线 */
+/* 页面内容：分割线 */
 hr {
     height: 0;
     margin: 0.2rem 0;
@@ -1590,7 +1606,7 @@ hr {
     border-top: var(--global-border-width) solid rgb(var(--global-border));
 }
 
-/* 目录 */
+/* 页面内容：目录模块 */
 #toc {
     position: relative;
     min-width: var(--toc-min-width);
@@ -1678,7 +1694,7 @@ hr {
     padding: 0.5rem 0.5rem 0.5rem 0;
 }
 
-/* 引用块 */
+/* 页面内容：引用块 */
 :is(blockquote, .blockquote, div.blockquote, [class*=blockquote]) {
     margin: 1rem 0;
     padding: 0 1rem;
@@ -1687,7 +1703,7 @@ hr {
     border: var(--global-border-width) solid rgb(var(--global-border));
 }
 
-/* 代码块 */
+/* 页面内容：代码块 */
 code, 
 .code, 
 .code pre, 
@@ -1710,7 +1726,7 @@ pre {
     overflow: visible;
 }
 
-/* 有序列表与无序列表 */
+/* 页面内容：有序列表与无序列表 */
 :where(ul,ol) {
     margin-left: 1rem;
     list-style: auto;
@@ -1720,7 +1736,7 @@ pre {
     list-style: initial;
 }
 
-/* 表格 */
+/* 页面内容：表格 */
 table {
     margin: auto;
 }
@@ -1748,7 +1764,7 @@ table:is(.wiki-content-table, .page-compare, table.form.grid) {
     border-bottom: var(--global-border-width) solid rgb(var(--global-border));
 }
 
-/* Listpages 计数器 */
+/* 页面内容：Listpages 计数器模块 */
 .pager {
     display: flex;
     justify-content: center;
@@ -1774,6 +1790,7 @@ table:is(.wiki-content-table, .page-compare, table.form.grid) {
 
 
 /* ———— 10. 自定义元素 ———— */
+/* “你知道的太多了” */
 .bblock {
     background-color: rgb(var(--global-txt));
     transition: color var(--global-duration) linear;
@@ -1795,6 +1812,7 @@ table:is(.wiki-content-table, .page-compare, table.form.grid) {
     transition: background-color var(--global-hover-duration) linear;
 }
 
+/* 键帽 */
 .keycap {
     background-color: rgb(var(--light-ui-bg));
     color: rgb(var(--light-ui-txt));
@@ -1802,11 +1820,13 @@ table:is(.wiki-content-table, .page-compare, table.form.grid) {
     box-shadow: 0 0.1rem 0 0.05rem rgb(var(--global-border));
 }
 
+/* << 向前走 | 脚人维基走路导航 | 向后走 >> */
 .footer-wikiwalk-nav {
     font-family: var(--ui-font);
     font-size: 0.8rem;
 }
 
+/* shadebox 类 */
 .shadebox {
     margin: 2rem 0;
     background: rgba(var(--light-block-bg), 0.4);
@@ -1814,6 +1834,7 @@ table:is(.wiki-content-table, .page-compare, table.form.grid) {
     box-shadow: 0 0 0 1rem rgba(var(--light-block-bg), 0.4);
 }
 
+/* block 基类 */
 .block {
     margin: 1rem 0;
     padding: 1rem;
@@ -1827,6 +1848,7 @@ table:is(.wiki-content-table, .page-compare, table.form.grid) {
     margin-bottom: 0;
 }
 
+/* 阴影基类 */
 .shadow {
     box-shadow: 0 0.2rem 0.5rem rgba(var(--global-dark-color), .8);
 }
@@ -1835,6 +1857,7 @@ table:is(.wiki-content-table, .page-compare, table.form.grid) {
     box-shadow: 0 0.2rem 1rem rgba(var(--global-dark-color), .6);
 }
 
+/* 配色基类 */
 .light-bg {
     background: rgb(var(--light-block-bg));
     color: rgb(var(--light-block-txt));
@@ -1845,7 +1868,7 @@ table:is(.wiki-content-table, .page-compare, table.form.grid) {
     color: rgb(var(--dark-block-txt));
 }
 
-/* 脚注块与参考文献 */
+/* 脚注模块、引用列表模块与参考文献模块 */
 .hovertip {
     width: auto !important;
     max-width: 20rem;
@@ -1887,6 +1910,7 @@ table:is(.wiki-content-table, .page-compare, table.form.grid) {
     font-size: 1.8rem;
 }
 
+/* 页面标签 */
 #main-content .page-tags span {
     display: flex;
     align-items: baseline;
@@ -1906,19 +1930,19 @@ table:is(.wiki-content-table, .page-compare, table.form.grid) {
 }
 
 
-/* ———— 11. 工具栏与活动区域 ———— */
+/* ———— 11. 页面工具栏 ———— */
+#page-info {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 #page-options-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 0;
     padding-bottom: 0.25rem;
-}
-
-#page-info {
-    flex-grow: 1;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 #page-options-container .page-options-bottom {
@@ -2241,7 +2265,7 @@ ul.nav.nav-pills li a {
 }
 
 
-/* ———— 12. 页面编辑器 ———— */
+/* ———— 12. 页面编辑框 ———— */
 .edit-help-34, 
 .edit-page-bottomtable {
     font-family: var(--ui-font);
@@ -3375,7 +3399,6 @@ div.wiki-note::before {
 .with-border-light {
     border: 1px solid rgb(var(--light-ui-bg));
 }
-
 
 
 
