@@ -3401,6 +3401,16 @@ div.wiki-note::before {
 }
 
 
+/* ———— 兼容：岛屿分级组件 ———— */
+:root {
+    --ic_border-color: 25, 20, 16;
+    --ic_bg-color: var(--light-block-bg), 1;
+    --ic_interspace: 3px;
+    --ic_font-color: 25, 20, 16;
+    --ic_font-size-C: 0.9375rem; /* 把 16px 转化为 15px */ /* why BHL why ———— 🍋🐱 */
+}
+
+
 
 
 /* ———— 移动端适配  ———— */
