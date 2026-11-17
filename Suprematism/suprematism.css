@@ -683,6 +683,7 @@ a.action-area-close:is(:hover, :focus),
     width: 100%;
     height: 100%;
     font-size: 0; /* 移除默认显示的用户名 */
+    overflow: hidden; /* 防止内部 a 元素溢出 */
 }
 
 /* 登录信息：用户信息弹窗入口 */
